@@ -6,16 +6,18 @@ async function main() {
 	let data = await fs.readFile('input', 'utf8')
 	data = data.split(',').map((n) => +n)
 
-	console.log('problem one: ', problemOne(data))
+	console.log('problem one: ', countTheFishes(data, 80))
+	console.log('problem two: ', countTheFishes(data, 256))
 }
 
+// test case
 let day0 = [0, 1, 1, 2, 1, 0, 0, 0, 0]
 let day1 = [1, 1, 2, 1, 0, 0, 0, 0, 0]
 let day2 = [1, 2, 1, 0, 0, 0, 1, 0, 1]
 let day3 = [2, 1, 0, 0, 0, 1, 1, 1, 1]
 let day4 = [1, 0, 0, 0, 1, 1, 3, 1, 2]
 
-function problemOne(data) {
+function countTheFishes(data, days) {
 	let lanternfish = []
 	for (let i = 0; i <= 8; i++) {
 		lanternfish[i] = 0
@@ -29,7 +31,7 @@ function problemOne(data) {
 
 	let day = 1
 
-	while (day <= 256) {
+	while (day <= days) {
 		let readyToSpawn = lanternfish[0]
 		for (let i = 0; i <= 7; i++) {
 			lanternfish[i] = lanternfish[i + 1]
