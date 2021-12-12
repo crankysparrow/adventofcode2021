@@ -1,0 +1,41 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+
+	<style>
+		body {
+			margin: 50px;
+			font-family: 'Courier New', Courier, monospace;
+			font-size: 20px;
+			line-height: 1;
+			font-weight: 500;
+			box-sizing: border-box;
+		}
+		*,
+		*:before,
+		*:after {
+			box-sizing: inherit;
+		}
+
+		#reef span {
+			width: 25px;
+			height: 25px;
+			margin: 1px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background: rgba(0, 0, 0, calc(0.05 * var(--c)));
+		}
+		#reef div {
+			display: flex;
+		}
+	</style>
+	<body>
+		<div id="reef"></div>
+		<script src="09.js"></script>
+	</body>
+</html>
