@@ -21,6 +21,7 @@ function solveCavePaths(caves) {
 	}
 }
 
+// reference for graph class: https://jarednielsen.com/data-structure-graph-depth-first-search/
 class Graph {
 	constructor() {
 		this.vertices = []
